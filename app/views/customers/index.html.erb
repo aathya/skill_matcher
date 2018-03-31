@@ -1,0 +1,39 @@
+<div class="paper" style="margin: 2rem auto; width: 50rem;">
+  <h3>Welcome to Skill Macther!</h3>
+  <p>You can search for professionals below</p>
+
+  <div>
+    <%= form_with url: customers_path, method: :get, data: {remote: false} do %>
+      <div class="form-group">
+        <label for="search">Select Professions and search for professions:</label>
+        <%= select_tag :search, options_from_collection_for_select(@professions, 'id', 'name', params[:search]), multiple: true, class: 'chosen-select', data: {placeholder: 'Select Professions'} %>
+      </div>
+      <div class="field">
+        <%= submit_tag 'Find Workers', class: 'btn btn-primary' %>
+      </div>
+    <% end %>
+  </div>
+  <% if @workers.size.positive? %>
+    <div style="margin-top: 1rem;">
+      <p>Search Results!</p>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Contact Info</th>
+            <th>Professions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @workers.each do |worker| %>
+            <tr>
+              <td><%= worker.name %></td>
+              <td><%= worker.email %></td>
+              <td><%= worker.professions.pluck(:name).join(', ') %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  <% end %>
+</div>

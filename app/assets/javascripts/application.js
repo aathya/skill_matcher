@@ -13,6 +13,9 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery
+//= require jquery_ujs
+//= require components/jquery-ui.min
+//= require popper
 //= require bootstrap
 //= require tether
 //= require toastr

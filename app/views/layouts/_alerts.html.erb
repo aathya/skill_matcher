@@ -1,0 +1,8 @@
+<% unless flash.empty? %>
+  <script type="text/javascript">
+    <% flash.each do |f| %>
+    <%  f[0] = 'warning' if f[0] == 'alert' %>
+    toastr['<%= f[0] %>']('<%= f[1] %>');
+    <% end %>
+  </script>
+<% end %>

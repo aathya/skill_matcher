@@ -2,8 +2,16 @@ helen:
   first_name: Helen
   last_name: Alderson
   profile_type: customer
+  email: helen@ecorp.in
 
 elliot:
   first_name: Elliot
   last_name: Alderson
   profile_type: worker
+  email: elliot@ecorp.in
+
+darlene:
+  first_name: Darlene
+  last_name: Alderson
+  profile_type: worker
+  email: darlene@ecorp.in

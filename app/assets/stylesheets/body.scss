@@ -1,0 +1,40 @@
+$aliceblue: aliceblue;
+$indianred: indianred;
+$dark-blue: #073C8D;
+$royal-blue: #0747A6;
+$dark-grey: #383745;
+$cream: #f5efe6;
+$orange: #ec5f27;
+$active-grey: #2f2d47;
+$red: #ff0000;
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: $cream;
+}
+
+.paper {
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 1px 1px 6px 0 #9ea2b8;
+}
+
+.form-check-label {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.nav-link {
+  &:hover {
+    cursor: pointer;
+  }
+}
+.list-group {
+  width: 61.5%;
+  margin-bottom: 1rem;
+  li {
+    a {
+      float: right;
+    }
+  }
+}

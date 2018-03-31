@@ -1,0 +1,21 @@
+<div class="paper" style="margin: 2rem auto;width: 50rem;">
+  <h3>Welcome to Skill Matcher!</h3>
+  <p>You have logged in as a worker. You can update your professions below!</p>
+  <p data-behaviour="no-profession-note" style="display: <%= 'hide' if @worker_professions.size.zero? %>">You have not registered any professions so far. You can register below!</p>
+
+  <ul class="list-group" style="display: <%= 'hide' if @worker_professions.size.zero? %>" data-behaviour="profession-list">
+    <% if @worker_professions.size.positive? %>
+      <% @worker_professions.each do |wp| %>
+        <%= render 'list', wp: wp %>
+      <% end %>
+    <% end %>
+  </ul>
+  <%= form_with url: workers_path, class: 'form-inline', data: {remote: true, behaviour: 'worker-profession-form'} do |f| %>
+    <div class="input-group">
+      <%= f.text_field :profession_name, class: 'form-control', required: true, placeholder: 'Enter Profession Name', style:"width: 400px", data: {behaviour: 'autocomplete', list: @profession_names} %>
+      <span class="input-group-btn">
+        <%= f.submit 'Add', class: 'btn btn-success' %>
+      </span>
+    </div>
+  <% end %>
+</div>

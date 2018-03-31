@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  profession: hacker
+  user: elliot
+
+two:
+  profession: developer
+  user: elliot
+
+three:
+  profession: cook
+  user: darlene

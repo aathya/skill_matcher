@@ -1,0 +1,6 @@
+$('[data-behaviour="profession-list"]').append('<%= j render 'list', wp: @worker_profession %>')
+$('[data-behaviour="no-profession-note"]').hide();
+$('[data-behaviour="worker-profession-form"]')[0].reset();
+var source = <%= raw @profession_names %>
+$('[data-behaviour="autocomplete"]').data('list', source)
+initAutoFocus()

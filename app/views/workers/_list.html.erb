@@ -1,0 +1,4 @@
+<li class="list-group-item" data-profession-id="<%= wp.id %>">
+  <%= wp.profession.name %>
+  <%= link_to 'Remove', worker_path(wp.id), method: :delete, class: 'btn btn-outline-danger pull-right btn-sm', data: {remote: true, confirm: 'Are you sure?'} %>
+</li>

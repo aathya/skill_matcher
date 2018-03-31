@@ -1,0 +1,10 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+hacker:
+  name: 'Hacker'
+
+developer:
+  name: 'Developer'
+
+cook:
+  name: 'Cooking'

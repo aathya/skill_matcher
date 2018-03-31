@@ -1,0 +1,7 @@
+$('[data-profession-id="<%= @worker_profession.id %>"]').remove()
+<% if current_user.worker_professions.size.zero? %>
+  $('[data-behaviour="no-profession-note"]').show()
+<% end %>
+var source = <%= raw @profession_names %>
+$('[data-behaviour="autocomplete"]').data('list', source)
+initAutoFocus()
