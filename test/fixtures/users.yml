@@ -1,0 +1,9 @@
+helen:
+  first_name: Helen
+  last_name: Alderson
+  profile_type: customer
+
+elliot:
+  first_name: Elliot
+  last_name: Alderson
+  profile_type: worker
