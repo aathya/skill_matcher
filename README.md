@@ -1,24 +1,18 @@
-# README
+# Profession Search
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a rails search application based on the workers profession.
 
-Things you may want to cover:
+Initial Steps to do:
 
-* Ruby version
+* install ruby 2.4.0
+* install rails 5.1.4
+* bundle install
+* rails db:create db:migrate
+* run rails server
 
-* System dependencies
+Wola! you are ready to go!
 
-* Configuration
+You can now sign up as a customer to search for professionals or sign up as worker to give services.
 
-* Database creation
+Used Devise for authentication.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
