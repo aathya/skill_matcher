@@ -1,9 +1,9 @@
 <div class="paper" style="margin: 2rem auto;width: 50rem;">
   <h3>Welcome to Skill Matcher!</h3>
   <p>You have logged in as a worker. You can update your professions below!</p>
-  <p data-behaviour="no-profession-note" style="display: <%= 'hide' if @worker_professions.size.zero? %>">You have not registered any professions so far. You can register below!</p>
+  <p data-behaviour="no-profession-note" style="display: <%= 'none' if @worker_professions.size.positive? %>" class="text-muted">You have not registered any professions so far.</p>
 
-  <ul class="list-group" style="display: <%= 'hide' if @worker_professions.size.zero? %>" data-behaviour="profession-list">
+  <ul class="list-group" data-behaviour="profession-list">
     <% if @worker_professions.size.positive? %>
       <% @worker_professions.each do |wp| %>
         <%= render 'list', wp: wp %>
