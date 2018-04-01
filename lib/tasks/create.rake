@@ -10,7 +10,8 @@ namespace :create do
     100.times do |i|
       user = User.create(first_name: Faker::Name.first_name,
                          last_name: Faker::Name.last_name,
-                         email: "user#{i}@email.com")
+                         email: "user#{i}@email.com",
+                         profile_type: 'worker')
       if user.persisted?
         user.worker_professions.create(profession_id: professions.sample)
       end

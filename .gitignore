@@ -12,7 +12,9 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+/git_hub
+/git_hub.pub
+/.idea
 /node_modules
 /yarn-error.log
 
